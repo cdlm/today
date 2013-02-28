@@ -1,9 +1,8 @@
-# today
+# today --- a productivity tracker
 
 * [Homepage](https://github.com/cdlm/today#readme)
 * [Issues](https://github.com/cdlm/today/issues)
 * [Documentation](http://rubydoc.info/gems/today/frames)
-* [Email](mailto:damien.pollet at gmail.com)
 
 ## Description
 
