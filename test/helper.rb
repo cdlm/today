@@ -12,6 +12,7 @@ rescue Bundler::BundlerError => e
   exit e.status_code
 end
 
-require 'minitest/unit'
+require 'minitest/autorun'
+require 'minitest/reporters'
+MiniTest::Reporters.use! MiniTest::Reporters::DefaultReporter.new
 
-MiniTest::Unit.autorun
