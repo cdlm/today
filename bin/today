@@ -12,3 +12,6 @@ if File.directory?(File.join(root,'.git'))
     end
   end
 end
+
+require 'today/cli'
+Today::CLI.run(ARGV)
