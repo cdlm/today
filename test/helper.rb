@@ -16,3 +16,6 @@ require 'minitest/autorun'
 require 'minitest/reporters'
 MiniTest::Reporters.use! MiniTest::Reporters::DefaultReporter.new
 
+require 'fakefs/safe'
+require 'fakefs/spec_helpers'
+

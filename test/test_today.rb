@@ -1,13 +1,16 @@
 # -*- encoding : utf-8 -*-
-require 'helper'
+require_relative 'helper'
 require 'today'
+require 'fileutils'
 
-class TestToday < MiniTest::Unit::TestCase
+describe Today do
+  include FakeFS::SpecHelpers
 
-  def test_version
+  it 'has a version number' do
     version = Today.const_get('VERSION')
-
-    assert(!version.empty?, 'should have a VERSION constant')
+    version.wont_be_empty
+    version.must_match /\d+(\.\d+)+/
   end
 
+  it 'has a default data root'
 end
