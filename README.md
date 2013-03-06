@@ -4,25 +4,27 @@
 * [Issues](https://github.com/cdlm/today/issues)
 * [Documentation](http://rubydoc.info/gems/today/frames)
 
-## Description
+TODO: Description (what it does, what it doesn't)
 
-TODO: Description
-
-## Features
-
-## Examples
-
-    require 'today'
-
-## Requirements
-
-## Install
+## Install & Usage
 
     $ gem install today
 
-## Synopsis
-
     $ today
+
+## Related projects
+
+### Ruby
+
+- [jog](https://github.com/tysontate/jog)
+- [timetrap](https://github.com/samg/timetrap)
+- [work_log](https://github.com/fabrik42/work_log)
+
+### Others
+
+- [journal](https://github.com/askedrelic/journal) (Python)
+- [dayone](http://dayoneapp.com/tools/) (commercial, graphical)
+- [jrnl](https://github.com/maebert/jrnl) (Python, compatible with dayone)
 
 ## Copyright
 
