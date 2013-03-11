@@ -1,17 +1,12 @@
 # encoding: utf-8
-
 require 'rubygems'
-
 begin
   require 'bundler'
+  Bundler.setup(:development)
 rescue LoadError => e
   warn e.message
   warn "Run `gem install bundler` to install Bundler."
   exit -1
-end
-
-begin
-  Bundler.setup(:development)
 rescue Bundler::BundlerError => e
   warn e.message
   warn "Run `bundle install` to install missing gems."
@@ -21,6 +16,11 @@ end
 require 'rake'
 
 task :default => :test
+
+desc "Watch & run tests using guard"
+task :guard do
+  exec *%w(bundle exec guard)
+end
 
 require 'rake/testtask'
 Rake::TestTask.new do |t|
