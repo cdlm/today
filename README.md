@@ -22,9 +22,9 @@ TODO: Description (what it does, what it doesn't)
 
 ### Others
 
+- [jrnl](https://github.com/maebert/jrnl) (Python, compatible with dayone, probably the closest from what I want)
 - [journal](https://github.com/askedrelic/journal) (Python)
 - [dayone](http://dayoneapp.com/tools/) (commercial, graphical)
-- [jrnl](https://github.com/maebert/jrnl) (Python, compatible with dayone)
 
 ## Copyright
 
