@@ -29,6 +29,7 @@ describe Today do
       subject.record "something interesting"
       subject.all_entries.wont_be_empty
       subject.last_entry.text.must_equal "something interesting"
+      subject.last_entry.age.must_be :<=, 1
     end
   end
 end
