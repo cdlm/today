@@ -22,6 +22,10 @@ describe Today do
   describe 'a new instance' do
     subject { Today.journal }
 
+    before do
+      FileUtils.mkdir_p File.expand_path('~')
+    end
+
     it 'has no entries' do
       subject.all_entries.wont_be_nil
       subject.all_entries.must_be_empty
@@ -34,7 +38,7 @@ describe Today do
       subject.last_entry.age.must_be :<=, 1
     end
 
-    describe 'an instance with a few entries' do
+    describe 'with a few entries' do
       before do
         Timecop.freeze 2.weeks.ago do
           subject.record 'an old entry'
@@ -50,6 +54,13 @@ describe Today do
         subject.last_entry.age.must_be :>=, 1.week
       end
 
+      it 'saves to disk' do
+        File.wont_be :exist?, subject.store_path
+        subject.save
+        File.must_be :exist?, subject.store_path
+        reloaded_journal = Today.journal
+        reloaded_journal.all_entries.size.must_equal 2
+      end
     end
   end
 end
