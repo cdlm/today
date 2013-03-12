@@ -16,6 +16,10 @@ require 'minitest/autorun'
 require 'minitest/reporters'
 MiniTest::Reporters.use! MiniTest::Reporters::DefaultReporter.new
 
+# Some tested code could exit unexpectedly, we want minitest to puke it like any
+# other exception instead of getting some ridiculously unrelated NPE
+MiniTest::Unit::TestCase::PASSTHROUGH_EXCEPTIONS.delete SystemExit
+
 require 'fakefs/safe'
 require 'fakefs/spec_helpers'
 
