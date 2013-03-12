@@ -19,6 +19,7 @@ Gem::Specification.new do |gem|
 
   gem.add_runtime_dependency 'cri', '~> 2.3'
   gem.add_runtime_dependency 'chronic', '~> 0.9'
+  gem.add_runtime_dependency 'activesupport'
 
   gem.add_development_dependency 'bundler'
   gem.add_development_dependency 'rake'
@@ -26,6 +27,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'minitest-reporters'
   gem.add_development_dependency 'guard-minitest'
   gem.add_development_dependency 'fakefs'
+  gem.add_development_dependency 'timecop'
   gem.add_development_dependency 'yard'
   gem.add_development_dependency 'kramdown'
 end
