@@ -19,6 +19,30 @@ describe Today::CLI do
     }.must_output /show help for this command/, ''
   end
 
-  it 'records an entry'
-  it 'consults daily entries'
+  it 'consults entries' do
+    skip 'not yet implemented'
+    proc {
+      Today::CLI.run []
+    }.must_output /no entries/
+  end
+
+  describe 'with an existing journal' do
+    before do
+      Today.journal.record 'been there'
+      Today.journal.record 'done that'
+    end
+
+    it 'records an entry' do
+      skip 'not yet implemented'
+      Today::CLI.run %w(I wrote some tests)
+      Today.journal.last_entry.text.must_be 'wrote some tests'
+    end
+
+    it 'consults entries' do
+      skip 'not yet implemented'
+      proc {
+        Today::CLI.run []
+      }.must_output /been there.*done that.*wrote some tests/
+    end
+  end
 end
